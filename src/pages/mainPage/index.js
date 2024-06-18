@@ -1,7 +1,8 @@
 import React from "react";
-import image1 from "../../img/1 1.jpeg";
+import image1 from "../../img/1 1.png";
 import * as S from "./styled";
 import { CardsMain } from "../../components/cards";
+import line from "../../img/slidershow2-2-1920x960_1920x960 1.png"
 
 export const MainPage = () => {
   return (
@@ -45,6 +46,7 @@ export const MainPage = () => {
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Следующий</span>
         </button>
+        <S.lineImg src={line} alt="line"/>
       </div>
       <S.titleMain>
         <S.titleMainText>GOOD4ME DEAL</S.titleMainText>

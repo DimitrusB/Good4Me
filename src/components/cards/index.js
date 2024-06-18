@@ -63,6 +63,10 @@ export const CardsMain = () => {
           </p>
         </S.pictItems>
       </S.mainDiv>
+      <S.nextSection>
+
+      </S.nextSection>
+
     </section>
   );
 };

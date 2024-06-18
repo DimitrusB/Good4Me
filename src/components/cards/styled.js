@@ -24,3 +24,4 @@ export const mainDiv = styled.div`
   flex-direction: row;
   justify-content: space-around;
 `;
+export const nextSection = styled.div``;

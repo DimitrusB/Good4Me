@@ -28,3 +28,10 @@ export const titleText = styled.p`
   font-weight: 500;
   line-height: 24px;
 `;
+
+export const lineImg = styled.img`
+  position: absolute;
+  right: 0;
+  bottom: -32px;
+  z-index: 1;
+`;
