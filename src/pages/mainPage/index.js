@@ -3,6 +3,7 @@ import image1 from "../../img/1 1.png";
 import * as S from "./styled";
 import { CardsMain } from "../../components/cards";
 import line from "../../img/slidershow2-2-1920x960_1920x960 1.png"
+import { OurProducts } from "../../components/products";
 
 export const MainPage = () => {
   return (
@@ -53,6 +54,7 @@ export const MainPage = () => {
         <S.titleText>Pick your beauty products today. 50% OFF on the most popular GOOD4ME. Order all classy products today!</S.titleText>
       </S.titleMain>
       <CardsMain />
+      <OurProducts/>
     </React.Fragment>
   );
 };

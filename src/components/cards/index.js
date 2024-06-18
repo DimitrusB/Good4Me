@@ -7,7 +7,6 @@ import imgGirl1 from "../../img/Rectangle17.svg"
 import imgGirl2 from "../../img/Rectangle18.svg"
 import imgGirl3 from "../../img/Rectangle16.svg"
 import * as S from "./styled";
-import { OurProducts } from "../products";
 
 export const CardsMain = () => {
   return (
@@ -96,7 +95,6 @@ export const CardsMain = () => {
           <img src={imgGirl3} alt=""/>
         </S.secGrid>
       </S.nextSection>
-      <OurProducts/>
     </section>
 
   );

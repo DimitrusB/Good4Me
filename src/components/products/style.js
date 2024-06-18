@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const mainDiv = styled.div`
+  min-width: 1920px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -44,4 +45,20 @@ export const title = styled.p`
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 2px;
+`;
+
+export const prodBotton = styled.button`
+  width: 254px;
+  height: 56px;
+  border: 2px solid #f6623e;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 85px;
+  margin-top: 60px;
 `;

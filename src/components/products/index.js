@@ -18,6 +18,7 @@ export const OurProducts = () => {
           </S.linkA>
         ))}
       </S.mainDiv>
+      <S.prodBotton>VIEW ALL PRODUCTS</S.prodBotton>
     </>
   );
 };
