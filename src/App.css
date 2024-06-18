@@ -32,10 +32,12 @@ section {
 
 .carousel-caption {
   position: absolute;
-  top: 142px;
+  top: 151px;
   z-index: 1;
   right: 375px;
   width: 545px;
+  left: 47%;
+  padding-top: 0;
 }
 
 .App-link {

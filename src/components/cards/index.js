@@ -3,22 +3,31 @@ import plane from "../../img/plane.svg";
 import eclipse from "../../img/eclipse.svg";
 import lock from "../../img/lock.svg";
 import cash from "../../img/cash.svg";
+import imgGirl1 from "../../img/Rectangle17.svg"
+import imgGirl2 from "../../img/Rectangle18.svg"
+import imgGirl3 from "../../img/Rectangle16.svg"
 import * as S from "./styled";
+import { OurProducts } from "../products";
 
 export const CardsMain = () => {
   return (
-    <section style={{ paddingTop: "66px" }}>
+    <section style={{ paddingTop: "66px", maxWidth: "1920px" }}>
       <div class="d-flex flex-row mb-3 justify-content-between gap-4">
         {cardsItem.map((item, index) => (
-          <a href="#">
+          <S.linkA href="#">
             <div
               class="card"
-              style={{ width: "397px", height: "auto", background: "#F4F3F4", border: "1px solid #E8E8E8" }}
+              style={{
+                width: "397px",
+                height: "auto",
+                background: "#F4F3F4",
+                border: "1px solid #E8E8E8",
+              }}
               key={index}
             >
               <img src={item.picture} class="card-img-top" alt="" />
             </div>
-            <div class="card-body mt-3 color:black">
+            <div class="card-body mt-3">
               <h5
                 class="card-title"
                 style={{
@@ -28,7 +37,7 @@ export const CardsMain = () => {
                 {item.title}
               </h5>
             </div>
-          </a>
+          </S.linkA>
         ))}
       </div>
       <S.mainDiv>
@@ -64,9 +73,31 @@ export const CardsMain = () => {
         </S.pictItems>
       </S.mainDiv>
       <S.nextSection>
-
+        <div style={{background:"#fff8f6", width:"1009px", alignItems:"center", justifyContent: "center", display:"flex" }}>
+          <S.secItem>
+          <S.secBigText>TAKE CONTROL OF YOUR HEALTH</S.secBigText>
+          <S.secUl>
+            <li>
+              The Good4Me range has been formulated based on scientific &
+              traditional evidence.
+            </li>
+            <li>
+              Our vitamins are here and ready to boost your mood, immunity and
+              overall well-being!
+            </li>
+            <li>Made in New Zealand from local and imported ingredients.</li>
+          </S.secUl>
+          <button>BROWSE OUR RANGE</button>
+          </S.secItem>
+        </div>
+        <S.secGrid>
+          <img src={imgGirl1} alt=""/>
+          <img src={imgGirl2} alt=""/>
+          <img src={imgGirl3} alt=""/>
+        </S.secGrid>
       </S.nextSection>
-
+      <OurProducts/>
     </section>
+
   );
 };
