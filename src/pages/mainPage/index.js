@@ -46,6 +46,10 @@ export const MainPage = () => {
           <span class="visually-hidden">Следующий</span>
         </button>
       </div>
+      <S.titleMain>
+        <S.titleMainText>GOOD4ME DEAL</S.titleMainText>
+        <S.titleText>Pick your beauty products today. 50% OFF on the most popular GOOD4ME. Order all classy products today!</S.titleText>
+      </S.titleMain>
       <CardsMain />
     </React.Fragment>
   );
