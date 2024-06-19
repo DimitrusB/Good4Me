@@ -62,3 +62,12 @@ export const prodBotton = styled.button`
   margin-bottom: 85px;
   margin-top: 60px;
 `;
+
+export const prodText = styled.p`
+  font-family: Jost;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 88.889% */
+  padding-bottom00:58px;
+`;

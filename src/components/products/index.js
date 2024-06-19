@@ -4,6 +4,7 @@ import * as S from "./style";
 export const OurProducts = () => {
   return (
     <>
+      <S.prodText>OUR PRODUCTS ARE</S.prodText>
       <S.mainDiv>
         {ourProducts.map((items, index) => (
           <S.linkA href="#">
@@ -13,7 +14,9 @@ export const OurProducts = () => {
             <S.title>{items.title}</S.title>
             <S.price>
               <p>{items.priceNew}</p>
-              <p style={{textDecoration:"line-through", color:"#828181"}}>{items.priceOld}</p>
+              <p style={{ textDecoration: "line-through", color: "#828181" }}>
+                {items.priceOld}
+              </p>
             </S.price>
           </S.linkA>
         ))}
