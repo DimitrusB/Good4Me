@@ -4,6 +4,7 @@ import * as S from "./styled";
 import { CardsMain } from "../../components/cards";
 import line from "../../img/slidershow2-2-1920x960_1920x960 1.png"
 import { OurProducts } from "../../components/products";
+import { ReviewMain } from "../../components/review";
 
 export const MainPage = () => {
   return (
@@ -55,6 +56,7 @@ export const MainPage = () => {
       </S.titleMain>
       <CardsMain />
       <OurProducts/>
+      <ReviewMain/>
     </React.Fragment>
   );
 };
