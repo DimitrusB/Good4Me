@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const mainRev = styled.div`
   display: flex;
@@ -25,6 +25,10 @@ export const mainRev = styled.div`
     transform: rotateY(180deg);
   }
 `;
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
 
 export const realRev = styled.div`
   width: 620px;
@@ -32,6 +36,10 @@ export const realRev = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  opacity: 0;
+  animation: ${fadeIn} 2.5s forwards;
+
+}
 `;
 export const realText = styled.p`
   font-feature-settings: "clig" off, "liga" off;

@@ -69,5 +69,5 @@ export const prodText = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: 32px; /* 88.889% */
-  padding-bottom00:58px;
+  padding-bottom:58px;
 `;
