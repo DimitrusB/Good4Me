@@ -5,6 +5,8 @@ import { CardsMain } from "../../components/cards";
 import line from "../../img/slidershow2-2-1920x960_1920x960 1.png"
 import { OurProducts } from "../../components/products";
 import { ReviewMain } from "../../components/review";
+import { ShopAllComp } from "../../components/products/shopAll";
+import { NewsComp } from "../../components/news";
 
 export const MainPage = () => {
   return (
@@ -57,6 +59,8 @@ export const MainPage = () => {
       <CardsMain />
       <OurProducts/>
       <ReviewMain/>
+      <ShopAllComp/>
+      <NewsComp/>>
     </React.Fragment>
   );
 };

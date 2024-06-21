@@ -8,6 +8,7 @@ export const mainRev = styled.div`
   width: 1920px;
   height: 885px;
   position: relative;
+  margin-bottom: 82px;
   & > img:first-child {
     position: absolute;
     right: 0;

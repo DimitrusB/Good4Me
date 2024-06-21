@@ -89,3 +89,8 @@ a {
   font-weight: 500;
   line-height: 32px;
 }
+
+p{
+  padding: 0;
+  margin: 0;
+}
