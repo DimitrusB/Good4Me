@@ -13,7 +13,7 @@ export const CardsMain = () => {
 
   return (
     <section style={{ paddingTop: "66px", maxWidth: "1920px" }}>
-      <div class="d-flex flex-row mb-3 justify-content-between gap-4">
+      <div class="d-flex flex-row mb-3 justify-content-center" style={{gap:"30px"}}>
         {cardsItem.map((item, index) => (
           <S.linkA href="#">
             <div
@@ -74,7 +74,7 @@ export const CardsMain = () => {
         </S.pictItems>
       </S.mainDiv>
       <S.nextSection>
-        <div style={{background:"#fff8f6", width:"1009px", alignItems:"center", justifyContent: "center", display:"flex" }}>
+        <div style={{background:"#fff8f6", width:"885px", alignItems:"center", justifyContent: "center", display:"flex" }}>
           <S.secItem>
           <S.secBigText>TAKE CONTROL OF YOUR HEALTH</S.secBigText>
           <S.secUl>

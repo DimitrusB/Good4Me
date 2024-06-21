@@ -11,6 +11,12 @@ import shopAllPic4 from "../../img/shopall4.png";
 import news1 from "../../img/news1.png";
 import news2 from "../../img/news2.png";
 import news3 from "../../img/news3.png";
+import anons1 from "../../img/anons1.png";
+import anons2 from "../../img/anons2.png";
+import anons3 from "../../img/anons3.png";
+import anons4 from "../../img/anons4.png";
+import anons5 from "../../img/anons5.png";
+import anons6 from "../../img/anons6.png";
 
 export const cardsItem = [
   {
@@ -127,3 +133,5 @@ export const news = [
       "We care about New Zealand children, and we want to support our community by providing our children in need with necessary vitamins to improve....",
   },
 ];
+
+export const imagesAnons = [anons1,anons2,anons3,anons4,anons5,anons6]

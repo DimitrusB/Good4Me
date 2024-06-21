@@ -27,6 +27,7 @@ export const mainDiv = styled.div`
 export const nextSection = styled.div`
   display: flex;
   padding-bottom:136px;
+  padding-right: 124px;
 `;
 
 export const secItem = styled.div`

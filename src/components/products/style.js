@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const mainDiv = styled.div`
-  min-width: 1920px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    width: 1920px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 `;
 
 export const imgDiv = styled.div`
@@ -36,6 +35,7 @@ export const price = styled.div`
 export const linkA = styled.a`
   text-decoration: none;
   color: black;
+  width: 397px;
 `;
 export const title = styled.p`
   padding-top: 21px;

@@ -7,6 +7,7 @@ import { OurProducts } from "../../components/products";
 import { ReviewMain } from "../../components/review";
 import { ShopAllComp } from "../../components/products/shopAll";
 import { NewsComp } from "../../components/news";
+import { AnonsMain } from "../../components/anons";
 
 export const MainPage = () => {
   return (
@@ -60,7 +61,8 @@ export const MainPage = () => {
       <OurProducts/>
       <ReviewMain/>
       <ShopAllComp/>
-      <NewsComp/>>
+      <NewsComp/>
+      <AnonsMain/>
     </React.Fragment>
   );
 };
