@@ -8,6 +8,7 @@ import { ReviewMain } from "../../components/review";
 import { ShopAllComp } from "../../components/products/shopAll";
 import { NewsComp } from "../../components/news";
 import { AnonsMain } from "../../components/anons";
+import { FooterComponent } from "../../components/footer";
 
 export const MainPage = () => {
   return (
@@ -63,6 +64,7 @@ export const MainPage = () => {
       <ShopAllComp/>
       <NewsComp/>
       <AnonsMain/>
+      <FooterComponent/>
     </React.Fragment>
   );
 };
