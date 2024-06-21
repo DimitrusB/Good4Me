@@ -4,11 +4,31 @@ import buttPrev from "../../img/buttPrev.svg";
 import buttNext from "../../img/buttNext.svg";
 import reviewImg from "../../img/reviewImg.png";
 import { StarIcon } from "./star";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { textRev } from "../const";
+import { getPosts } from "../api";
 
 export const ReviewMain = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      setIsLoading(true);
+      try {
+        // Предполагаем, что getPosts - это функция, которая асинхронно получает данные
+        const data = await getPosts();
+        setPosts(data);
+      } catch (error) {
+        console.error('Ошибка при загрузке данных:', error);
+      }
+      setIsLoading(false);
+    }
+
+    fetchPosts();
+  }, []);
+
 
   const StarRating = () => {
     const totalStars = 5;
@@ -17,15 +37,12 @@ export const ReviewMain = () => {
 
     for (let i = 0; i < totalStars; i++) {
       stars.push(
-        <StarIcon
-          key={i}
-          color={i < positiveCount ? '#FFC107' : '#D8D8D8'}
-        />
+        <StarIcon key={i} color={i < positiveCount ? "#FFC107" : "#D8D8D8"} />
       );
     }
-    return <div style={{display:"flex", gap: "4px"}}>{stars}</div>;
+    return <div style={{ display: "flex", gap: "4px" }}>{stars}</div>;
   };
-  console.log(textRev[currentIndex].starIconPositive);
+
   const textMain = () => {
     const item = textRev[currentIndex];
     return (

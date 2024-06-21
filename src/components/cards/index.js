@@ -7,8 +7,10 @@ import imgGirl1 from "../../img/Rectangle17.svg"
 import imgGirl2 from "../../img/Rectangle18.svg"
 import imgGirl3 from "../../img/Rectangle16.svg"
 import * as S from "./styled";
+import uniqid from 'uniqid'
 
 export const CardsMain = () => {
+
   return (
     <section style={{ paddingTop: "66px", maxWidth: "1920px" }}>
       <div class="d-flex flex-row mb-3 justify-content-between gap-4">
@@ -22,7 +24,7 @@ export const CardsMain = () => {
                 background: "#F4F3F4",
                 border: "1px solid #E8E8E8",
               }}
-              key={index}
+              key={uniqid()}
             >
               <img src={item.picture} class="card-img-top" alt="" />
             </div>
