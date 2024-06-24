@@ -1,27 +1,41 @@
+import { useState } from "react";
 import { ourProducts } from "../const";
 import * as S from "./style";
 
 export const OurProducts = () => {
+  const [items, setItems] = useState(ourProducts.slice(0, 4));
+  const [allProd, setAllProd] = useState(false)
+
+  const handleViewAll = () => {
+    setItems(ourProducts);
+    setAllProd(true)
+  };
+
+  const handleViewHidden =() =>{
+    setItems(ourProducts.slice(0, 4))
+    setAllProd(false);
+  }
   return (
+
     <>
       <S.prodText>OUR PRODUCTS ARE</S.prodText>
       <S.mainDiv>
-        {ourProducts.map((items, index) => (
+        {items.map((item, index) => (
           <S.linkA href="#">
             <S.imgDiv key={index}>
-              <img src={items.picture} alt="" />
+              <img src={item.picture} alt="" />
             </S.imgDiv>
-            <S.title>{items.title}</S.title>
+            <S.title>{item.title}</S.title>
             <S.price>
-              <p>{items.priceNew}</p>
+              <p>{item.priceNew}</p>
               <p style={{ textDecoration: "line-through", color: "#828181" }}>
-                {items.priceOld}
+                {item.priceOld}
               </p>
             </S.price>
           </S.linkA>
         ))}
       </S.mainDiv>
-      <S.prodBotton>VIEW ALL PRODUCTS</S.prodBotton>
+      <S.prodBotton onClick={!allProd ? handleViewAll : handleViewHidden}>{allProd ? "HIDE ALL PRODUCTS" : "VIEW ALL PRODUCTS"}</S.prodBotton>
     </>
   );
 };

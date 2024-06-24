@@ -62,28 +62,6 @@ export const ourProducts = [
     priceNew: "$94.95 NZD",
     priceOld: "$199.75 NZD",
   },
-];
-
-export const textRev = [
-  {
-    title: "REAL REVIEWS",
-    titleNext: "REAL RESULTS",
-    textM:
-      "We have perfected our formulas over time, based on your feedback.Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.",
-    author: "_Chloe H.",
-    starIconPositive: 4,
-  },
-  {
-    title: "REAL REVIEWS",
-    titleNext: "REAL RESULTS",
-    textM:
-      "We have perfected our formulas over time, based on your feedback.Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.",
-    author: "Borisevich D.A.",
-    starIconPositive: 3,
-  },
-];
-
-export const shopAll = [
   {
     picture: shopAllPic1,
     title: "**PRE-ORDER** HAIR, SKIN & NAILS (5 MONTH SUPPLY)",
@@ -107,6 +85,25 @@ export const shopAll = [
     title: "APPLE CIDER VINEGAR",
     priceNew: "$94.95 NZD",
     priceOld: "$199.75 NZD",
+  },
+];
+
+export const textRev = [
+  {
+    title: "REAL REVIEWS",
+    titleNext: "REAL RESULTS",
+    textM:
+      "We have perfected our formulas over time, based on your feedback.Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.",
+    author: "_Chloe H.",
+    starIconPositive: 4,
+  },
+  {
+    title: "REAL REVIEWS",
+    titleNext: "REAL RESULTS",
+    textM:
+      "We have perfected our formulas over time, based on your feedback.Check out hundreds of reviews on our website.We can't wait until you are a part of our Good4Me Family.",
+    author: "Borisevich D.A.",
+    starIconPositive: 3,
   },
 ];
 

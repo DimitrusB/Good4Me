@@ -5,6 +5,7 @@ export const mainDiv = styled.div`
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 `;
 
 export const imgDiv = styled.div`
