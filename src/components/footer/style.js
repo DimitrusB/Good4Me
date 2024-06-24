@@ -112,12 +112,12 @@ export const downFoot = styled.div`
   margin-top: 21px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   color: #000;
   font-family: Jost;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  justify-content: space-between;
 `;

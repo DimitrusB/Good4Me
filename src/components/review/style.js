@@ -27,8 +27,14 @@ export const mainRev = styled.div`
   }
 `;
 const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 `;
 
 export const realRev = styled.div`
@@ -38,13 +44,12 @@ export const realRev = styled.div`
   align-items: flex-start;
   gap: 24px;
   opacity: 0;
-  animation: ${fadeIn} 2.5s forwards;
+  animation: ${fadeIn} 0.8s forwards;
 
 }
 `;
 export const realText = styled.p`
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;

@@ -10,24 +10,22 @@ import { getPosts } from "../api";
 
 export const ReviewMain = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [posts, setPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [posts, setPosts] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    async function fetchPosts() {
-      setIsLoading(true);
-      try {
-        // Предполагаем, что getPosts - это функция, которая асинхронно получает данные
-        const data = await getPosts();
-        setPosts(data);
-      } catch (error) {
-        console.error('Ошибка при загрузке данных:', error);
-      }
-      setIsLoading(false);
-    }
-
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchPosts() {
+  //     setIsLoading(true);
+  //     try {
+  //       const data = await getPosts();
+  //       setPosts(data);
+  //     } catch (error) {
+  //       console.error('Ошибка при загрузке данных:', error);
+  //     }
+  //     setIsLoading(false);
+  //   }
+  //   fetchPosts();
+  // }, []);
 
 
   const StarRating = () => {
@@ -46,23 +44,25 @@ export const ReviewMain = () => {
   const textMain = () => {
     const item = textRev[currentIndex];
     return (
-      <S.realRev>
+      <S.realRev key={currentIndex}>
         <S.realText>{item.title}</S.realText>
         <S.realText1>{item.titleNext}</S.realText1>
         {StarRating()}
-        <S.realText2>“{item.textM}”</S.realText2>
+          <S.realText2>“{item.textM}”</S.realText2>
         <S.realText3>{item.author}</S.realText3>
         <S.buttRev>
           <button style={{ border: "none" }} onClick={handleButtonPrev}>
-            <img src={buttPrev} alt="" />
+            <img src={buttPrev} alt="Previous" />
           </button>
           <button style={{ border: "none" }} onClick={handleButtonNext}>
-            <img src={buttNext} alt="" />
+            <img src={buttNext} alt="Next" />
           </button>
+          <p>{currentIndex+1} из {textRev.length}</p>
         </S.buttRev>
       </S.realRev>
     );
   };
+  
 
   const handleButtonPrev = () => {
     setCurrentIndex((prevIndex) => {
