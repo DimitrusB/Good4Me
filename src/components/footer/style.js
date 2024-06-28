@@ -79,9 +79,12 @@ export const formFooter = styled.form`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid;
+    & :focus {
+    outline: none;
+}
 `;
 
-export const inputSearch = styled.input`
+export const inputEmail = styled.input`
   background: transparent;
   border: none;
   color: #000;
@@ -91,9 +94,8 @@ export const inputSearch = styled.input`
   font-weight: 400;
   line-height: 26px;
   width: -webkit-fill-available;
-  &::active {
-    border: none;
-  }
+
+}
 `;
 
 export const butFoot = styled.button`

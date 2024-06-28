@@ -29,8 +29,8 @@ export const FooterComponent = () => {
             </S.textSmallP>
             <div>
               <S.formFooter>
-                <S.inputSearch
-                  type="search"
+                <S.inputEmail
+                  type="email"
                   placeholder="Enter your email address"
                 />
                 <S.butFoot onClick={handleSubscribe}>SUBSCRIBE</S.butFoot>
