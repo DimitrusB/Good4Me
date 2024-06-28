@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import line from "../../img/slidershow2-2-1920x960_1920x960 1.png";
 import * as S from "./style";
 import logo from "../../img/Logo.png";
 import social from "../../img/social.svg";
 import pay from "../../img/pays.png";
-
+import { Button, Modal } from "react-bootstrap";
 export const FooterComponent = () => {
-  const handleSubscribe = () => {
-    alert("Вы подписаны");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (event) => {
+    event.preventDefault();
+    setIsModalOpen(true);
+  };
+  const handleClose = () => {
+    setIsModalOpen(false);
   };
   return (
     <React.Fragment>
@@ -32,9 +39,24 @@ export const FooterComponent = () => {
                 <S.inputEmail
                   type="email"
                   placeholder="Enter your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <S.butFoot onClick={handleSubscribe}>SUBSCRIBE</S.butFoot>
               </S.formFooter>
+              <Modal show={isModalOpen} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Сообщение</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <p>Ваш почтовый адрес {email} подписан</p>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Закрыть
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </div>
           </S.divElemCenter>
           <S.divElem>
