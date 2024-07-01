@@ -4,28 +4,13 @@ import buttPrev from "../../img/buttPrev.svg";
 import buttNext from "../../img/buttNext.svg";
 import reviewImg from "../../img/reviewImg.png";
 import { StarIcon } from "./star";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { textRev } from "../const";
-import { getPosts } from "../api";
+
 
 export const ReviewMain = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const [posts, setPosts] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
 
-  // useEffect(() => {
-  //   async function fetchPosts() {
-  //     setIsLoading(true);
-  //     try {
-  //       const data = await getPosts();
-  //       setPosts(data);
-  //     } catch (error) {
-  //       console.error('Ошибка при загрузке данных:', error);
-  //     }
-  //     setIsLoading(false);
-  //   }
-  //   fetchPosts();
-  // }, []);
 
 
   const StarRating = () => {

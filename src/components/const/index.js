@@ -17,6 +17,8 @@ import anons3 from "../../img/anons3.png";
 import anons4 from "../../img/anons4.png";
 import anons5 from "../../img/anons5.png";
 import anons6 from "../../img/anons6.png";
+import image1 from "../../img/1 1.png";
+import image2 from "../../img/12.jpg";
 
 export const cardsItem = [
   {
@@ -87,6 +89,19 @@ export const ourProducts = [
     priceOld: "$199.75 NZD",
   },
 ];
+
+export const carouselItem =[
+  {
+    title: "Apple Cider Vinegar",
+    textMain: "Good4Me Apple Cider Vinegar gummies are the newest addition to  your morning health and well-being regime.",
+    img: image1,
+  },
+  {
+    title: "Avon Parfum for All",
+    textMain: "Avon Products, Inc. or simply known as Avon is an American-British multinational cosmetics, skincare, fragrance and personal care company based in London.",
+    img: image2,
+  },
+]
 
 export const textRev = [
   {

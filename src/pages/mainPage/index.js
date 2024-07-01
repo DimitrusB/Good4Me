@@ -1,70 +1,69 @@
 import React from "react";
-import image1 from "../../img/1 1.png";
 import * as S from "./styled";
 import { CardsMain } from "../../components/cards";
-import line from "../../img/slidershow2-2-1920x960_1920x960 1.png"
+import line from "../../img/slidershow2-2-1920x960_1920x960 1.png";
 import { OurProducts } from "../../components/products";
 import { ReviewMain } from "../../components/review";
 import { ShopAllComp } from "../../components/products/shopAll";
 import { NewsComp } from "../../components/news";
 import { AnonsMain } from "../../components/anons";
 import { FooterComponent } from "../../components/footer";
+import { carouselItem } from "../../components/const";
 
 export const MainPage = () => {
   return (
     <React.Fragment>
-      <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src={image1} class="d-block w-100" alt="..." />
-            <div class="carousel-caption  d-md-block p-absolute">
-              <h5>Good4Me</h5>
-              <p>Apple Cider Vinegar</p>
-              <p>
-                Good4Me Apple Cider Vinegar gummies are the newest addition to
-                your morning health and well-being regime.{" "}
-              </p>
+      <div id="carouselExampleFade" className="carousel slide carousel-fade">
+        <div className="carousel-inner">
+          {carouselItem.map((el, index) => (
+            <div
+              className={`carousel-item ${index === 0 ? 'active' : ""}`}
+              data-bs-interval="2000"
+              key={index}
+            >
+              <img src={el.img} className="d-block w-100" alt="..." />
+              <S.carouselCaption>
+                <S.h5Text>Good4Me</S.h5Text>
+                <S.bigText>{el.title}</S.bigText>
+                <S.textItem>{el.textMain}</S.textItem>
+              </S.carouselCaption>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src={image1} class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src={image1} class="d-block w-100" alt="..." />
-          </div>
+          ))}
         </div>
-
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleFade"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Предыдущий</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Предыдущий</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleFade"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Следующий</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Следующий</span>
         </button>
-        <S.lineImg src={line} alt="line"/>
+        <S.lineImg src={line} alt="line" />
       </div>
       <S.titleMain>
         <S.titleMainText>GOOD4ME DEAL</S.titleMainText>
-        <S.titleText>Pick your beauty products today. 50% OFF on the most popular GOOD4ME. Order all classy products today!</S.titleText>
+        <S.titleText>
+          Pick your beauty products today. 50% OFF on the most popular GOOD4ME.
+          Order all classNamey products today!
+        </S.titleText>
       </S.titleMain>
       <CardsMain />
-      <OurProducts/>
-      <ReviewMain/>
-      <ShopAllComp/>
-      <NewsComp/>
-      <AnonsMain/>
-      <FooterComponent/>
+      <OurProducts />
+      <ReviewMain />
+      <ShopAllComp />
+      <NewsComp />
+      <AnonsMain />
+      <FooterComponent />
     </React.Fragment>
   );
 };

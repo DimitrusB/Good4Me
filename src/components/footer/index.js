@@ -7,11 +7,14 @@ import pay from "../../img/pays.png";
 import { Button, Modal } from "react-bootstrap";
 export const FooterComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (event) => {
     event.preventDefault();
-    setIsModalOpen(true);
+    if (email === "") (
+      alert("Введите почту"))
+      else(
+    setIsModalOpen(true))
   };
   const handleClose = () => {
     setIsModalOpen(false);
@@ -40,7 +43,9 @@ export const FooterComponent = () => {
                   type="email"
                   placeholder="Enter your email address"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                      setEmail(e.target.value);
+                  }}
                 />
                 <S.butFoot onClick={handleSubscribe}>SUBSCRIBE</S.butFoot>
               </S.formFooter>
